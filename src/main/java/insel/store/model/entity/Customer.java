@@ -3,6 +3,8 @@ package insel.store.model.entity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 
 @Entity
 @Table(name = "customer")
@@ -71,6 +73,136 @@ public class Customer {
     @Column
     private String comment;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
+    }
+
+    public String getAgency() {
+        return agency;
+    }
+
+    public void setAgency(String agency) {
+        this.agency = agency;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMobilePhoneNumber() {
+        return mobilePhoneNumber;
+    }
+
+    public void setMobilePhoneNumber(String mobilePhoneNumber) {
+        this.mobilePhoneNumber = mobilePhoneNumber;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPhoneOtherNumber() {
+        return phoneOtherNumber;
+    }
+
+    public void setPhoneOtherNumber(String phoneOtherNumber) {
+        this.phoneOtherNumber = phoneOtherNumber;
+    }
+
+    public String getFaxNumber() {
+        return faxNumber;
+    }
+
+    public void setFaxNumber(String faxNumber) {
+        this.faxNumber = faxNumber;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Customer customer)) return false;
+        return Objects.equals(id, customer.id) && Objects.equals(lastname, customer.lastname) && Objects.equals(firstname, customer.firstname) && Objects.equals(gender, customer.gender) && Objects.equals(address, customer.address) && Objects.equals(country, customer.country) && Objects.equals(city, customer.city) && Objects.equals(postcode, customer.postcode) && Objects.equals(agency, customer.agency) && Objects.equals(email, customer.email) && Objects.equals(mobilePhoneNumber, customer.mobilePhoneNumber) && Objects.equals(phoneNumber, customer.phoneNumber) && Objects.equals(phoneOtherNumber, customer.phoneOtherNumber) && Objects.equals(faxNumber, customer.faxNumber) && Objects.equals(comment, customer.comment);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, lastname, firstname, gender, address, country, city, postcode, agency, email, mobilePhoneNumber, phoneNumber, phoneOtherNumber, faxNumber, comment);
+    }
 
     @Override
     public String toString() {
