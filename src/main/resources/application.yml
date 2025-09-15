@@ -1,0 +1,25 @@
+#docker run --name inselDB -p 5433:5432 -e POSTGRES_USER=ol_edge -e POSTGRES_PASSWORD=letmein007! -e POSTGRES_DB=insel -d postgres
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/insel
+    username: ol_edge
+    password: letmein007!
+    driver-class-name: org.postgresql.Driver
+
+
+  application:
+    name: inselDB
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+
+
+  jpa:
+    properties:
+      hibernate:
+        auto_quote_keyword: true
+
+server:
+  servlet:
+    context-path: /api

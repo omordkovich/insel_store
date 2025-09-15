@@ -5,7 +5,10 @@ import jakarta.persistence.*;
 
 import java.util.Objects;
 
-
+/**
+ * @author Oleg Mordkovich
+ * {@code @date} 10.09.2025
+ */
 @Entity
 @Table(name = "customer")
 @Schema(description = "Class for customer description.")
