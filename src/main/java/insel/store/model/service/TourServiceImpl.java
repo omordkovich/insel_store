@@ -33,7 +33,7 @@ public class TourServiceImpl implements TourService {
 
     @Override
     public TourDTO getTourById(Long id) {
-        return null;
+        return repository.findById(id).map(mapper::mapEntityToDto).orElse(null);
     }
 
     @Override
